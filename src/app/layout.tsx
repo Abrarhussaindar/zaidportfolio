@@ -20,81 +20,57 @@ const jetbrainsMono = JetBrains_Mono({
 // Define metadata for SEO
 export const metadata: Metadata = {
   title: {
-    default: "Abrar Hussain Dar - Full Stack Developer",
-    template: "%s | Abrar Hussain Dar - Full Stack Developer"
+    default: "Zaid Mayers - ML & AI Engineer | Data Scientist",
+    template: "%s | Zaid Mayers"
   },
-  description: "Experienced Full Stack Developer specializing in Next.js, React.js Node.js, TypeScript, and scalable web applications. Building high-performance systems with modern technologies including Next.js, React, MongoDB, and PostgreSQL.",
+  description: "Machine Learning and Artificial Intelligence Engineer with a Master's from Drexel University. Specializing in computer vision, deep learning, cloud infrastructure, and end-to-end ML pipeline development.",
   keywords: [
-    "backend developer",
-    "full stack developer",
-    "Node.js developer",
-    "TypeScript developer",
-    "React developer",
-    "Next.js developer",
-    "JavaScript developer",
-    "MongoDB expert",
-    "PostgreSQL developer",
-    "API development",
-    "web development",
-    "software engineer",
-    "Abrar Hussain Dar",
-    "Bengaluru developer",
-    "Indian developer",
-    "MERN stack developer",
+    "machine learning engineer",
+    "AI engineer",
+    "data scientist",
+    "computer vision",
+    "deep learning",
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-Learn",
     "Python developer",
-    "Django developer",
-    "FastAPI developer",
-    "Azure cloud",
-    "scalable applications",
-    "database design",
-    "REST API",
-    "microservices"
+    "drone detection",
+    "ResNet",
+    "YOLOv11",
+    "AWS",
+    "GCP",
+    "Docker",
+    "Kubernetes",
+    "Drexel University",
+    "Philadelphia",
+    "Zaid Mayers",
+    "ML pipeline",
+    "predictive analytics",
+    "churn prediction",
+    "biomedical AI",
+    "pattern recognition"
   ],
-  authors: [{ name: "Abrar Hussain Dar", url: "https://abrarhussaindar.dev" }],
-  creator: "Abrar Hussain Dar",
-  publisher: "Abrar Hussain Dar",
-  category: "Portfolio & Development",
-  applicationName: "Abrar Hussain Dar Portfolio",
+  authors: [{ name: "Zaid Mayers", url: "https://linkedin.com/in/zaid-mayers-b1ba7121a" }],
+  creator: "Zaid Mayers",
+  publisher: "Zaid Mayers",
+  category: "Portfolio & AI Research",
+  applicationName: "Zaid Mayers Portfolio",
   formatDetection: {
     email: true,
     telephone: true,
     address: true,
   },
-  alternates: {
-    canonical: "https://abrarhussaindar.dev",
-    languages: {
-      'en-US': 'https://abrarhussaindar.dev',
-    },
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://abrarhussaindar.dev",
-    title: "Abrar Hussain Dar - Backend Developer & Software Engineer",
-    description: "Experienced Backend Developer from Bengaluru, India. Specializing in Node.js, TypeScript, React, and building scalable web applications. Available for freelance projects and full-time opportunities.",
-    siteName: "Abrar Hussain Dar Portfolio",
-    images: [
-      {
-        url: "https://abrarhussaindar.dev/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Abrar Hussain Dar - Backend Developer Portfolio",
-      },
-    ],
+    title: "Zaid Mayers - ML & AI Engineer | Data Scientist",
+    description: "ML & AI Engineer based in Philadelphia, PA. MS in Machine Learning Engineering from Drexel University (GPA 4.0). Research in drone detection, biomedical pattern recognition, and cloud infrastructure.",
+    siteName: "Zaid Mayers Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@abrarhussaindar",
-    creator: "@abrarhussaindar",
-    title: "Abrar Hussain Dar - Backend Developer",
-    description: "Backend Developer specializing in Node.js, TypeScript, and modern web technologies. Building scalable applications and robust API systems.",
-    images: ["https://abrarhussaindar.dev/twitter-card.jpg"],
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
+    title: "Zaid Mayers - ML & AI Engineer",
+    description: "ML & AI Engineer specializing in computer vision, deep learning, and end-to-end ML pipelines. Dean's List at Drexel University.",
   },
   robots: {
     index: true,
@@ -109,19 +85,14 @@ export const metadata: Metadata = {
     },
   },
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#7c3aed" },
-    { media: "(prefers-color-scheme: dark)", color: "#1e1b4b" }
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" }
   ],
-  verification: {
-    google: "your-google-site-verification-code", // Replace with actual Google Search Console verification code
-    // Add other verification codes as needed
-  },
   appleWebApp: {
-    title: "Abrar Hussain Dar",
+    title: "Zaid Mayers",
     statusBarStyle: "black-translucent",
     capable: true,
   },
-  manifest: "https://abrarhussaindar.dev/manifest.json",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -134,18 +105,17 @@ export const metadata: Metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180" },
     ],
     other: [
-      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#7c3aed" },
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#000000" },
     ],
   },
   other: {
-    "linkedin:profile": "https://linkedin.com/in/abrarhussain0366",
-    "github:profile": "https://github.com/Abrarhussaindar",
-    "contact:email": "abrardar988651@gmail.com",
-    "contact:phone": "+91-6006045264",
-    "location:city": "Bengaluru",
-    "location:country": "India",
-    "profession": "Backend Developer",
-    "experience": "2+ years",
+    "linkedin:profile": "https://linkedin.com/in/zaid-mayers-b1ba7121a",
+    "contact:email": "zaidmayers2@gmail.com",
+    "contact:phone": "+1-206-930-0523",
+    "location:city": "Philadelphia",
+    "location:state": "PA",
+    "location:country": "USA",
+    "profession": "ML & AI Engineer",
     "availability": "Available for work",
   },
 };
@@ -154,56 +124,73 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Abrar Hussain Dar",
-  "jobTitle": "Backend Developer",
-  "description": "Experienced Backend Developer specializing in Node.js, TypeScript, and scalable web applications",
-  "url": "https://abrarhussaindar.dev",
-  "email": "abrardar988651@gmail.com",
-  "telephone": "+91-6006045264",
+  "name": "Zaid Mayers",
+  "jobTitle": "Machine Learning and Artificial Intelligence Engineer",
+  "description": "ML & AI Engineer specializing in computer vision, deep learning, and cloud infrastructure. MS in Machine Learning Engineering from Drexel University.",
+  "email": "zaidmayers2@gmail.com",
+  "telephone": "+1-206-930-0523",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Bengaluru",
-    "addressCountry": "India"
+    "addressLocality": "Philadelphia",
+    "addressRegion": "PA",
+    "addressCountry": "USA"
   },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Presidency University",
-    "location": "Bengaluru, India"
-  },
-  "worksFor": [
+  "alumniOf": [
     {
-      "@type": "Organization",
-      "name": "Navrekh Technologies Pvt. Ltd.",
-      "location": "Pune, India"
+      "@type": "CollegeOrUniversity",
+      "name": "Drexel University",
+      "location": "Philadelphia, PA"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Presidency University",
+      "location": "India"
     }
   ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "iMaple Laboratory, Drexel University",
+    "location": "Philadelphia, PA"
+  },
   "knowsAbout": [
-    "Node.js",
-    "TypeScript",
-    "JavaScript",
-    "React.js",
-    "Next.js",
+    "Machine Learning",
+    "Artificial Intelligence",
+    "Computer Vision",
+    "Deep Learning",
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-Learn",
     "Python",
-    "Django",
-    "FastAPI",
-    "MongoDB",
-    "PostgreSQL",
-    "MERN Stack",
-    "Azure Cloud",
-    "API Development",
-    "Database Design",
-    "Backend Architecture"
+    "AWS",
+    "GCP",
+    "Docker",
+    "Kubernetes",
+    "Data Science",
+    "Statistical Modeling",
+    "ResNet",
+    "YOLOv11",
+    "CI/CD",
+    "ArgoCD"
   ],
   "sameAs": [
-    "https://linkedin.com/in/abrarhussain0366",
-    "https://github.com/Abrarhussaindar"
+    "https://linkedin.com/in/zaid-mayers-b1ba7121a"
   ],
-  "hasCredential": {
-    "@type": "EducationalOccupationalCredential",
-    "name": "Bachelor of Technology in Computer Science and Engineering",
-    "educationalLevel": "Bachelor's Degree",
-    "credentialCategory": "degree"
-  }
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Master of Science in Machine Learning Engineering",
+      "educationalLevel": "Master's Degree",
+      "credentialCategory": "degree",
+      "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Drexel University" }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Bachelor of Technology in Computer Science Engineering",
+      "educationalLevel": "Bachelor's Degree",
+      "credentialCategory": "degree",
+      "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Presidency University" }
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -233,16 +220,16 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//linkedin.com" />
 
         {/* Additional SEO meta tags */}
-        <meta name="geo.region" content="IN-KA" />
-        <meta name="geo.placename" content="Bengaluru" />
-        <meta name="geo.position" content="12.9716;77.5946" />
-        <meta name="ICBM" content="12.9716, 77.5946" />
+        <meta name="geo.region" content="US-PA" />
+        <meta name="geo.placename" content="Philadelphia" />
+        <meta name="geo.position" content="39.9526;-75.1652" />
+        <meta name="ICBM" content="39.9526, -75.1652" />
 
         {/* Theme color for different browsers */}
-        <meta name="msapplication-TileColor" content="#7c3aed" />
+        <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
       </head>
-      <body className="antialiased text-slate-900 bg-slate-50 dark:text-slate-100 dark:bg-slate-900 font-inter">
+      <body className="antialiased text-white bg-black font-inter">
         <div className="min-h-screen flex flex-col">
           {children}
         </div>

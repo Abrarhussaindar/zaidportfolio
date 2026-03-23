@@ -95,7 +95,7 @@ export const education = [
         degree: "Master of Science in Machine Learning Engineering",
         institution: "Drexel University",
         location: "Philadelphia, PA",
-        gpa: "4.0",
+        gpa: "3.8",
         period: "Dec 2025",
         awards: ["Dean's List – Fall 2023, Winter 2023, Spring 2023, Fall 2024"],
     },

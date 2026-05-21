@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Download, Mail, Linkedin, ChevronDown } from 'lucide-react';
+import { Download, Mail, Linkedin, Github, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -31,7 +31,7 @@ const HeroSection = () => {
                             whileHover={{ scale: 1.1, rotate: 10 }}
                             transition={{ type: "spring", stiffness: 300, damping: 15 }}
                         >
-                            <img src="/me.png" className="rounded-full" alt="Abrar Hussain Dar" />
+                            <img src="/me.png" className="rounded-full" alt="Zaid Mayers" />
                         </motion.div>
                         <motion.div
                             className="absolute -inset-1 rounded-full blur-xl opacity-50"
@@ -45,10 +45,10 @@ const HeroSection = () => {
                     Zaid Mayers
                 </motion.h1>
                 <motion.h2 variants={itemVariants} className="text-2xl md:text-3xl font-semibold mb-6 text-primary">
-                    ML & AI Engineer | Data Scientist
+                    Machine Learning Engineer | AI Systems & GenAI | Computer Vision
                 </motion.h2>
                 <motion.p variants={itemVariants} className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-muted-foreground">
-                    Building intelligent systems at the intersection of machine learning and real-world impact. Specializing in computer vision, predictive analytics, and cloud-deployed ML pipelines.
+                    Building intelligent systems at the intersection of ML research and real-world impact. Co-author of LRDDv3 accepted to ICRA 2026. Specializing in computer vision, GenAI, RAG systems, and cloud-deployed ML pipelines.
                 </motion.p>
                 <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Button asChild size="lg" className="w-full sm:w-auto">
@@ -66,8 +66,9 @@ const HeroSection = () => {
                 </motion.div>
                 <motion.div variants={itemVariants} className="flex justify-center space-x-6 mt-8">
                     {[
-                        { icon: Linkedin, href: "https://linkedin.com/in/zaid-mayers-b1ba7121a/" },
-                        { icon: Mail, href: "mailto:zaidmayers2@gmail.com" }
+                        { icon: Linkedin, href: "https://linkedin.com/in/zaidmayers" },
+                        { icon: Github, href: "https://github.com/zaidmayers" },
+                        { icon: Mail, href: "mailto:zaidroshanmayers@gmail.com" }
                     ].map(({ icon: Icon, href }, index) => (
                         <motion.a
                             key={index}

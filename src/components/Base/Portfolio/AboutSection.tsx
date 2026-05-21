@@ -19,25 +19,25 @@ const AboutSection = () => {
                         viewport={{ once: true }}
                     >
                         <h3 className="text-2xl font-semibold mb-6 text-primary">
-                            ML & AI Engineer | Data Scientist
+                            Machine Learning Engineer | AI Systems & GenAI | Computer Vision
                         </h3>
                         <p className="mb-6 leading-relaxed text-muted-foreground">
-                            Based in Philadelphia, PA, I'm a Machine Learning and AI Engineer with an MS in Machine Learning Engineering from Drexel University (GPA 4.0). I specialize in computer vision, predictive analytics, and end-to-end ML pipeline development.
+                            Based in Seattle, WA, I'm a Machine Learning Engineer with an MS in Machine Learning Engineering from Drexel University (GPA 3.8). I specialize in computer vision, GenAI, RAG systems, and end-to-end ML pipeline development.
                         </p>
                         <p className="mb-6 leading-relaxed text-muted-foreground">
-                            From training ResNet classifiers for drone detection to building biomedical cell classifiers, I bring research rigor and engineering discipline to every project — always focused on measurable performance gains.
+                            From co-authoring the LRDDv3 drone dataset accepted to ICRA 2026 to building HIPAA-compliant RAG microservices, I bring research rigor and engineering discipline to every project — always focused on measurable performance gains.
                         </p>
                         <div className="grid grid-cols-2 gap-4 mt-8">
                             <Card className="text-center">
                                 <CardContent className="p-4">
-                                    <div className="text-2xl font-bold mb-2 text-primary">4.0</div>
+                                    <div className="text-2xl font-bold mb-2 text-primary">3.8</div>
                                     <div className="text-muted-foreground">MS GPA</div>
                                 </CardContent>
                             </Card>
                             <Card className="text-center">
                                 <CardContent className="p-4">
-                                    <div className="text-2xl font-bold mb-2 text-primary">20+</div>
-                                    <div className="text-muted-foreground">Papers Reviewed</div>
+                                    <div className="text-2xl font-bold mb-2 text-primary">100K+</div>
+                                    <div className="text-muted-foreground">Drone Images Annotated</div>
                                 </CardContent>
                             </Card>
                         </div>
@@ -53,11 +53,11 @@ const AboutSection = () => {
                             <CardContent className="p-6 space-y-4">
                                 <div className="flex items-center">
                                     <MapPin className="mr-3 text-primary" size={20} />
-                                    <span className="text-muted-foreground">Philadelphia, PA</span>
+                                    <span className="text-muted-foreground">Seattle, WA</span>
                                 </div>
                                 <div className="flex items-center">
                                     <Mail className="mr-3 text-primary" size={20} />
-                                    <span className="text-muted-foreground">zaidmayers2@gmail.com</span>
+                                    <span className="text-muted-foreground">zaidroshanmayers@gmail.com</span>
                                 </div>
                                 <div className="flex items-center">
                                     <Phone className="mr-3 text-primary" size={20} />
@@ -74,7 +74,7 @@ const AboutSection = () => {
                                     <GraduationCap className="mr-3 mt-1 text-primary flex-shrink-0" size={18} />
                                     <div>
                                         <p className="font-medium text-foreground">MS in Machine Learning Engineering</p>
-                                        <p className="text-sm text-muted-foreground">Drexel University, Philadelphia, PA — GPA 4.0 (Dec 2025)</p>
+                                        <p className="text-sm text-muted-foreground">Drexel University, Philadelphia, PA — GPA 3.8 (Dec 2025)</p>
                                         <p className="text-xs text-primary mt-1">Dean's List: Fall 2023, Winter 2023, Spring 2023, Fall 2024</p>
                                     </div>
                                 </div>

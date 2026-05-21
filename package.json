@@ -1,8 +1,8 @@
 {
-  "name": "abrarhussaindar-portfolio",
+  "name": "zaidmayers-portfolio",
   "version": "0.1.0",
   "private": true,
-  "author": "Abrar Hussain Dar",
+  "author": "Zaid Mayers",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

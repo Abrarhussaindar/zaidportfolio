@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, ExternalLink } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -72,9 +72,9 @@ const ContactSection = () => {
                         className="space-y-6"
                     >
                         {[
-                            { icon: Mail, title: "Email", content: "zaidmayers2@gmail.com", href: "mailto:zaidmayers2@gmail.com" },
+                            { icon: Mail, title: "Email", content: "zaidroshanmayers@gmail.com", href: "mailto:zaidroshanmayers@gmail.com" },
                             { icon: Phone, title: "Phone", content: "+1 206 930 0523", href: "tel:+12069300523" },
-                            { icon: MapPin, title: "Location", content: "Philadelphia, PA", href: "#" }
+                            { icon: MapPin, title: "Location", content: "Seattle, WA", href: "#" }
                         ].map((contact) => (
                             <motion.a key={contact.title} href={contact.href} whileHover={{ scale: 1.03, x: 5 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
                                 <Card className="hover:border-primary transition-colors">
@@ -99,7 +99,8 @@ const ContactSection = () => {
                             <CardContent>
                                 <div className="flex space-x-4">
                                     {[
-                                        { icon: Linkedin, href: "https://linkedin.com/in/zaid-mayers-b1ba7121a/" },
+                                        { icon: Linkedin, href: "https://linkedin.com/in/zaidmayers" },
+                                        { icon: Github, href: "https://github.com/zaidmayers" },
                                     ].map((social) => (
                                         <Button key={social.href} asChild variant="outline" size="icon">
                                             <motion.a

@@ -9,10 +9,15 @@ const techIcons: Record<string, string> = {
   'Scikit-Learn': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg',
   'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
   'GCP': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg',
-  'Docker': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
   'MySQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+  'PostgreSQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
   'MATLAB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg',
   'C': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+  'FastAPI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg',
+  'Flask': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg',
+  'Git': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+  'Linux': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
+  'SQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
 };
 
 // Get proficiency label
@@ -33,16 +38,26 @@ const getProficiencyColor = (level: number) => {
 
 // Technology descriptions
 const techDescriptions: Record<string, string> = {
-  'Python': 'Primary language for ML research, data science, and backend pipeline development',
+  'Python': 'Primary language for ML research, GenAI, data science, and backend pipeline development',
   'TensorFlow': 'End-to-end open-source platform for building and deploying ML models at scale',
   'PyTorch': 'Deep learning framework used for computer vision and research-grade model training',
   'Scikit-Learn': 'Machine learning library for classification, regression, clustering, and evaluation',
-  'AWS': 'Cloud platform used for deploying ML applications including AWS Beanstalk deployments',
-  'GCP': 'Google Cloud Platform for scalable compute and cloud-based ML infrastructure',
-  'Docker': 'Containerization tool for reproducible, portable ML and application environments',
+  'YOLOv11': 'State-of-the-art object detection model benchmarked on drone detection datasets (mAP@50: 0.822)',
+  'LangChain': 'Framework for building LLM-powered applications and RAG pipelines',
+  'RAG': 'Retrieval-Augmented Generation for HIPAA-compliant clinical summary and Q&A systems',
+  'Ollama': 'On-premise LLM inference engine powering 100% HIPAA-compliant deployments',
+  'pgvector': 'PostgreSQL vector extension with IVFFlat for sub-second cosine similarity search',
+  'FastAPI': 'High-performance Python API framework used in production RAG microservices',
+  'Flask': 'Lightweight Python web framework for deploying ML models to REST endpoints',
+  'PostgreSQL': 'Relational database powering vector search and multi-role application schemas',
   'MySQL': 'Relational database for structured data storage in ML and data science projects',
-  'MATLAB': 'Numerical computing environment used for signal processing and engineering tasks',
+  'AWS': 'Cloud platform for deploying ML applications via Elastic Beanstalk and beyond',
+  'GCP': 'Google Cloud Platform for scalable compute and cloud-based ML infrastructure',
+  'SQL': 'Query language for relational databases used across ML data pipelines',
+  'Git': 'Version control system for collaborative research and production codebases',
+  'MATLAB': 'Numerical computing environment for signal processing and engineering tasks',
   'C': 'Systems programming language for low-level performance-critical implementations',
+  'Linux': 'Primary OS for running ML workloads, lab servers, and cloud compute instances',
 };
 
 const SkillCard = ({ skill, index }: any) => {
@@ -133,7 +148,7 @@ const SkillCard = ({ skill, index }: any) => {
 
 const SkillsSection = () => {
   // Group skills by category
-  const categories = ['ML/AI', 'Programming', 'Cloud', 'Database'];
+  const categories = ['ML/AI', 'Backend & Cloud', 'Languages & Tools'];
   const groupedSkills = categories.map(cat => ({
     category: cat,
     skills: skillsData.filter(skill => skill.category === cat)

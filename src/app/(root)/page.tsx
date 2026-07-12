@@ -6,6 +6,7 @@ import Header from '@/components/Base/Header';
 import HeroSection from '@/components/Base/Portfolio/HeroSection';
 import AboutSection from '@/components/Base/Portfolio/AboutSection';
 import ExperienceSection from '@/components/Base/Portfolio/ExperienceSection';
+import PublicationsSection from '@/components/Base/Portfolio/PublicationsSection';
 import ProjectsSection from '@/components/Base/Portfolio/ProjectsSection';
 import SkillsSection from '@/components/Base/Portfolio/SkillsSection';
 import ContactSection from '@/components/Base/Portfolio/ContactSection';
@@ -32,6 +33,7 @@ const PortfolioPage = () => {
                 <HeroSection />
                 <AboutSection />
                 <ExperienceSection />
+                <PublicationsSection />
                 <ProjectsSection />
                 <SkillsSection />
                 <ContactSection />

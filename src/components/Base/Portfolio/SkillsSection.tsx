@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
+import { Brain, Cloud, Terminal, Tags, BookMarked, type LucideIcon } from 'lucide-react';
 import { skillsData } from '@/data/portfolioData';
 
-// Official technology icons/logos as SVG
+// Official technology icons/logos as SVG — only tools that actually have a brand mark.
+// Anything not listed here falls back to a category icon (see categoryIcons below).
 const techIcons: Record<string, string> = {
   'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
   'TensorFlow': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
@@ -18,6 +20,18 @@ const techIcons: Record<string, string> = {
   'Git': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
   'Linux': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
   'SQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+  'Jupyter': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg',
+  'PyCharm': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg',
+  'Pydantic': 'https://cdn.simpleicons.org/pydantic/E92063',
+};
+
+// Fallback icon per category for skills with no real brand logo (concepts, methodologies, niche tools)
+const categoryIcons: Record<string, LucideIcon> = {
+  'ML/AI': Brain,
+  'Backend & Cloud': Cloud,
+  'Languages & Tools': Terminal,
+  'Data & Annotation': Tags,
+  'Domain Knowledge': BookMarked,
 };
 
 // Get proficiency label
@@ -58,13 +72,31 @@ const techDescriptions: Record<string, string> = {
   'MATLAB': 'Numerical computing environment for signal processing and engineering tasks',
   'C': 'Systems programming language for low-level performance-critical implementations',
   'Linux': 'Primary OS for running ML workloads, lab servers, and cloud compute instances',
+  'ResNet': 'Convolutional backbone used in DroneDAR for monocular distance regression',
+  'LLM Inference': 'Serving and optimizing on-premise large language models for production workloads',
+  'Pydantic': 'Data validation and settings management for FastAPI-based microservices',
+  'Jupyter': 'Interactive notebook environment for research, EDA, and model prototyping',
+  'PyCharm': 'Primary IDE for Python development across ML and backend projects',
+  'LabelImg': 'Bounding-box annotation tool used to label 100K+ drone images for LRDDv3',
+  'SAM3': 'Segment Anything Model used to annotate husky drone frames for sensor fusion training',
+  'Label Studio': 'Data labeling platform for building ground-truth datasets across ML projects',
+  'Feature Engineering': 'Deriving predictive features from raw data to improve model performance',
+  'Benchmark Dataset Construction': 'Building large-scale labeled benchmarks, including the 102K-image LRDDv3 dataset',
+  'Ground-Truth Labeling': 'Producing high-fidelity annotations that anchor model evaluation and benchmarking',
+  'Ablation Studies': 'Systematic component-wise experiments to validate model design decisions',
+  'Healthcare Data Privacy': 'Designing systems that safeguard sensitive patient data end-to-end',
+  'HIPAA-Aware System Design': 'Architecting fully on-premise, zero-external-transmission systems for HIPAA compliance',
+  'Biomedical Research': 'Applying ML to biomedical datasets, including HeLa cell mitotic event classification',
+  'Academic Research': 'Co-authoring peer-reviewed publications accepted to IEEE ICRA and AVSS',
 };
 
 const SkillCard = ({ skill, index }: any) => {
   const proficiency = getProficiencyLabel(skill.level);
   const proficiencyColor = getProficiencyColor(skill.level);
   const description = techDescriptions[skill.name] || 'Professional technology skill';
-  
+  const logoUrl = techIcons[skill.name];
+  const FallbackIcon = categoryIcons[skill.category] || Brain;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -75,21 +107,21 @@ const SkillCard = ({ skill, index }: any) => {
       className="bg-card border border-border rounded-xl p-6 hover:shadow-xl hover:border-primary/50 transition-all duration-300"
     >
       <div className="flex items-start gap-4">
-        {/* Official Icon */}
+        {/* Official Icon (or category fallback when no brand logo exists) */}
         <motion.div
           whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
           transition={{ duration: 0.5 }}
-          className="bg-gradient-to-br from-primary/10 to-primary/5 p-3 rounded-xl flex-shrink-0 border border-primary/10"
+          className="bg-gradient-to-br from-primary/10 to-primary/5 p-3 rounded-xl flex-shrink-0 border border-primary/10 w-14 h-14 flex items-center justify-center"
         >
-          <img 
-            src={techIcons[skill.name]} 
-            alt={skill.name}
-            className="w-8 h-8 object-contain"
-            onError={(e) => {
-              // Fallback if image fails to load
-              e.currentTarget.style.display = 'none';
-            }}
-          />
+          {logoUrl ? (
+            <img
+              src={logoUrl}
+              alt={skill.name}
+              className="w-8 h-8 object-contain"
+            />
+          ) : (
+            <FallbackIcon className="w-6 h-6 text-primary" />
+          )}
         </motion.div>
         
         <div className="flex-1 min-w-0">
@@ -148,7 +180,7 @@ const SkillCard = ({ skill, index }: any) => {
 
 const SkillsSection = () => {
   // Group skills by category
-  const categories = ['ML/AI', 'Backend & Cloud', 'Languages & Tools'];
+  const categories = ['ML/AI', 'Backend & Cloud', 'Languages & Tools', 'Data & Annotation', 'Domain Knowledge'];
   const groupedSkills = categories.map(cat => ({
     category: cat,
     skills: skillsData.filter(skill => skill.category === cat)

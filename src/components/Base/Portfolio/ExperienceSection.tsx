@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building2, MapPin, Calendar } from 'lucide-react';
+import { Building2, MapPin, Calendar, ExternalLink } from 'lucide-react';
 import { experiences } from '@/data/portfolioData';
 import SectionTitle from './SectionTitle';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -45,7 +45,19 @@ const ExperienceSection = () => {
                                         {exp.location}
                                     </div>
                                     {exp.project && (
-                                        <p className="text-sm text-primary italic mb-4">{exp.project}</p>
+                                        <p className="text-sm text-primary italic mb-4 flex items-center gap-2">
+                                            {exp.project}
+                                            {exp.link && (
+                                                <a
+                                                    href={exp.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-primary hover:text-primary/80 transition-colors not-italic"
+                                                >
+                                                    <ExternalLink size={14} />
+                                                </a>
+                                            )}
+                                        </p>
                                     )}
                                     <ul className="space-y-3 list-disc list-inside text-muted-foreground">
                                         {exp.responsibilities.map((resp, respIndex) => (
